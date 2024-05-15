@@ -1,2 +1,3 @@
 easygoogletranslate
 pandas
+psycopg2

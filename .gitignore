@@ -1,3 +1,4 @@
 .idea
 __pycache__
-etl/product_dec_gen/data
+data
+Dockerfile
