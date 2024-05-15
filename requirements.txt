@@ -1,3 +1,4 @@
 easygoogletranslate
 pandas
+sqlalchemy
 psycopg2

@@ -30,7 +30,7 @@ class ETL:
         password =  os.environ['PASSWORD']
         host = os.environ['HOST']
         port = os.environ['PORT']
-        database = os.environ['DATABASE']
+        database= os.environ['DATABASE']
 
         try:
             connection_url = f"postgresql://{username}:{password}@{host}:{port}/{database}"
