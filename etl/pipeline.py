@@ -26,11 +26,11 @@ translator = EasyGoogleTranslate(
 # Define the ETL class
 class ETL:
     def __init__(self):
-        username = 'postgres'
-        password = 'llavafinetune'
-        host = '4.213.40.12'
-        port = 5432
-        database = 'postgres'
+        username = os.environ['USERNAME']
+        password =  os.environ['PASSWORD']
+        host = os.environ['HOST']
+        port = os.environ['PORT']
+        database = os.environ['DATABASE']
 
         try:
             connection_url = f"postgresql://{username}:{password}@{host}:{port}/{database}"
