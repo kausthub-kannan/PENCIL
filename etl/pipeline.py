@@ -54,6 +54,15 @@ class ETL:
                 line_data = json.loads(line)
                 session = self.Session()
 
+                sql = f"SELECT * FROM items WHERE item_id = '{line_data.get('item_id')}'"
+                df = pd.read_sql(sql, con=self.engine)
+
+                logger.info(f"Checking for duplicates...")
+                if not df.empty:
+                    continue
+
+                logger.info(f"Duplicates found {i}... \n")
+
                 new_item = Items(
                     item_id = line_data.get('item_id'),
                     name = translator.translate(line_data.get('item_name', [{}])[0].get('value', '')),
