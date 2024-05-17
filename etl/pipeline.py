@@ -51,6 +51,7 @@ class ETL:
             logger.info(f"Extracting Data from listing {listing}...")
 
             for i, line in enumerate(data):
+                print(line)
                 line_data = json.loads(line)
                 session = self.Session()
 
